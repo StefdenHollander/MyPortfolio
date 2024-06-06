@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>📊ChartJS Examples</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="./Styles/Style.css"/>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery Scripts-->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Chart.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+
+    <!-- Leaflet JavaScript Library CSS & JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- My own scripts-->
+    <script defer src="./Scripts/RandomDataChart.js"></script>
+    <script defer src="./Scripts/ParsedCSVDataChart.js"></script>
+    <script defer src="./Scripts/FetchedJSONDataChart.js"></script>
+    <script defer src="./Scripts/ChartsManager.js"></script>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- Header -->
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="/index.html">
+                📊ChartJS Templates
+            </a>
+
+            <button
+                class           ="navbar-toggler"
+                type            ="button"
+                data-toggle     ="collapse"
+                data-target     ="#navbarNav"
+                aria-controls   ="navbarNav"
+                aria-expanded   ="false"
+                aria-label      ="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">
+                            Home 
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <!-- Dropdown Menu for Projects -->
+                    <li class="nav-item dropdown active">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="./index.html"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            MyProjects
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" href="../ChartJSDashboard/">
+                                📈ChartJS Dashboard
+                            </a>
+                            <a class="dropdown-item active" href="./index.html">
+                                📊ChartJS Examples
+                            </a>
+                            <a class="dropdown-item" href="../TheWallOfShaders/">
+                                🧱The Wall Of Shaders
+                            </a>
+                            <a class="dropdown-item" href="../OpenGLShaderEditor/">
+                                ✨OpenGL Shader Editor
+                            </a>
+                            <a class="dropdown-item bi bi-bootstrap" href="../BootstrapCards/">
+                                BootstrapCards
+                            </a>
+                            <a class="dropdown-item" href="../CuboidDog/">
+                                🐶CuboidDog Unity WebGL
+                            </a>
+                            <a class="dropdown-item" href="../SolarSystem/">
+                                🌌SolarSystem Unity WebGL
+                            </a>
+                            <a class="dropdown-item" href="../RotatingDivs/">
+                                🛞Rotating <strong>&lt;div&gt;</strong>s
+                            </a>
+                            <a class="dropdown-item" href="../P5jsExamples/">
+                                🎨P5js Examples
+                            </a>
+                            
+                            <!-- Add more project links above here -->
+                        </div>
+                    </li>
+                    <!-- End of Dropdown -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Timanious/MyPortfolio" target="_blank" rel="noopener noreferrer">
+                            GitHub Repo
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/AboutMe.html">
+                            About Me
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/Services.html">
+                            Services
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        <!-- Content Area -->
+        <div class="container mt-2">
+            <div class="row">
+
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 px-1">
+                    <div class="card text-white bg-dark text-center">
+
+                        <div class="card-header">
+                            Line Chart
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Random Data Chart
+                            </h5>
+
+                            <p class="card-text">
+                                A Basic ChartJS Line Chart displaying random data updated every second.
+                            </p>
+
+                            <canvas id="ChartCanvas1"></canvas>
+
+                        </div>
+
+                        <div class="card-footer">
+                            #ChartJS #Random #LineChart
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 px-1">
+                    <div class="card text-white bg-dark text-center">
+
+                        <div class="card-header">
+                            Fetching Data From a CSV File
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Fetching Data From a CSV File
+                            </h5>
+
+                            <p class="card-text">
+                                A bar chart displaying data Fetched and Parsed from a Comma Seperated Values (CSV) file.
+                            </p>
+
+                            <canvas id="ChartCanvas2"></canvas>
+
+                        </div>
+
+                        <div class="card-footer">
+                            #ChartJS #Random #LineChart
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 px-1">
+                    <div class="card text-white bg-dark text-center">
+
+                        <div class="card-header">
+                            Fetched JSON Data Chart
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Fetched JSON Data Chart
+                            </h5>
+
+                            <p class="card-text">
+                                A map created with <a href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">Leaflet.js</a> displaying the location of the ISS Fetched from the <a href="https://wheretheiss.at" target="_blank" rel="noopener noreferrer">wheretheiss.at</a> API.
+                            </p>
+                            <p>
+                                Latitude: <span id="ValueLatitude">     </span></br>
+                                Longitude: <span id="ValueLongitude">   </span>
+                            </p>
+                            <div id="ContainerDivISSMap" style="height: 256px;"></div>
+
+                        </div>
+
+                        <div class="card-footer">
+                            #ChartJS #Random #LineChart
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 
+        Footer
+        mt-auto = margin top is set to auto. This pushes down the element 
+        vertically to stick to the bottom of its container. 
+
+        py-3 = padding on the y-axis (both top and bottom) is set to scale 3. 
+        Which is a size scale in Bootstrap. 
+    -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+            <span class="text-light">© 2024 The <strong>&lt;Symbol&gt;</strong> Factory </span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+

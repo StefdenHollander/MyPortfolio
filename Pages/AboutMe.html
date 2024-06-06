@@ -27,17 +27,31 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="/index.html">The Symbol Factory</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            
+            <a class="navbar-brand" href="/index.html">
+                The Symbol Factory
+            </a>
+            
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    
                     <!-- Dropdown for Projects -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -60,13 +74,16 @@
                             <!-- Add more project links here -->
                         </div>
                     </li>
+                    
                     <!-- End of Dropdown -->
                     <li class="nav-item active">
                         <a class="nav-link" href="/Pages/AboutMe.html">AboutMe</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="/Pages/Services.html">Services</a>
                     </li>
+                
                 </ul>
             </div>
         </nav>
@@ -76,48 +93,24 @@
         <!-- Content Area -->
         <div class="container mt-5" id="content-area" >
             <div class="row">
-                <!-- Card for Home Page -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Home</h5>
-                            <p class="card-text">Welcome to The Symbol Factory. Discover my work and passion for software
-                                development.</p>
-                            <a href="/index.html" class="btn btn-light">Go to Home</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card for Projects Page -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Projects</h5>
-                            <p class="card-text">Explore the projects I've worked on and contributed to.</p>
-                            <a href="/MyProjects/index.html" class="btn btn-light">View Projects</a>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Card for About Me Page -->
-                <div class="col-md-4 mb-4">
+                <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">About Me</h5>
-                            <p class="card-text">Learn more about my journey and expertise in software development.</p>
-                            <a href="/Pages/AboutMe.html" class="btn btn-light">About Me</a>
+
+                            <h5 class="card-title">
+                                About Me
+                            </h5>
+
+                            <p class="card-text">
+                                "Something interesting written about me, preferably written by someone else important."
+                            </p>
+
                         </div>
                     </div>
                 </div>
-                <!-- Card for Services Page -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Services</h5>
-                            <p class="card-text">Find out about the services I offer and how I can help you with your
-                                software needs.</p>
-                            <a href="/Pages/Services.html" class="btn btn-light">Our Services</a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </main>

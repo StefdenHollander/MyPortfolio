@@ -1,0 +1,39 @@
+/* body,
+html {
+    height: 100%;
+    margin: 0;
+} */
+
+body
+{
+    background-color: rgb(241, 163, 68); 
+    background-image: url('../Images/StroopWaffleTileable.png');  
+    background-size: 300px 300px;
+}
+
+
+/* .navbar,
+.footer { */
+    /* background-color: #bd93f9; */
+/* } */
+
+.card {
+    border: none;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgb(255, 150, 111);
+}
+
+.card:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.85);
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2); */
+}
+
+.card-header,
+.card-footer {
+    background-color: coral;
+}
+
+footer
+{
+    background-color: coral;
+}

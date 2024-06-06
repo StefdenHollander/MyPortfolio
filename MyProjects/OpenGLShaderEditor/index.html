@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="body d-flex flex-column h-100">
+<body class="body d-flex flex-column">
     
     <!-- Header -->
     <header>
@@ -75,12 +75,17 @@
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="../TheWallOfShaders/">
-                                🧱TheWallOfShaders
-                            </a>
 
                             <a class="dropdown-item" href="../ChartJSDashboard/">
                                 📈ChartJSDashBoard
+                            </a>
+
+                           <a class="dropdown-item active" href="../ChartJSExamples/">
+                                📊ChartJS Examples
+                            </a>
+
+                            <a class="dropdown-item" href="../TheWallOfShaders/">
+                                🧱TheWallOfShaders
                             </a>
 
                             <a class="dropdown-item active" href="./index.html">
@@ -103,10 +108,20 @@
                                 🛞Rotating <strong>&lt;div&gt;</strong>s
                             </a>
 
+                            <a class="dropdown-item" href="../P5jsExamples/">
+                                🎨P5js Examples
+                            </a>
+
                             <!-- Add more project links above -->
                         </div>
                     </li>
                     <!-- End of Dropdown -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Timanious/MyPortfolio" target="_blank" rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/Pages/AboutMe.html">
@@ -125,15 +140,15 @@
         </nav>
     </header>
 
-    <main class="flex-shrink-0">
+    <main class="flex-shrink h-100 mt-2 mb-2">
     <!-- Content Area -->
-        <div class="container-fluid mt-2">
-            <div class="row">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
 
                 <!-- Shader EditorCard -->
-                <div class=" col-md-12">
-                    <div class="card shader-editor-card">
-                        <div class="card-body shader-editor-card-body">
+                <div class="col h-100">
+                    <div class="card shader-editor-card h-100">
+                        <div class="card-body shader-editor-card-body h-100">
                             
                             <h6 class="shader-editor-card-title">
                                 GLSL Shader Editor Card
@@ -146,9 +161,8 @@
                                 Hello Shader!
                             </h6>
 
-                            <div class="rightupper">
-                                <div class="text form-group">
-                                    <textarea  class="form-control shader-editor-card-textarea" spellcheck="false" title="OpenGLShaderEditor" rows="20" id="shaderInput1">
+                            <div class="text form-group">
+                                <textarea  class="form-control shader-editor-card-textarea" spellcheck="false" title="OpenGLShaderEditor" rows="20" id="shaderInput1">
 precision highp float;
 
 varying highp vec2 vTextureCoord;
@@ -163,8 +177,7 @@ void main()
 
     gl_FragColor = vec4(uv.x, uv.y, sin(u_time)*0.5+0.5, 1.0);
 }
-                                    </textarea>
-                                </div>
+                                </textarea>
                             </div>
                             
                             <button id="shaderButton1" class="btn btn-light">
